@@ -1,0 +1,7 @@
+{
+  "name": "CellularConnectivityAndNoiseMap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

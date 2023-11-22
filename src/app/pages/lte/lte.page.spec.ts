@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MapComponentModule } from '../components/map/map.component.module';
-import { Tab3Page } from './tab3.page';
+import { MapComponentModule } from '../../components/map/map.component.module';
+import { LtePage } from './lte.page';
 
-describe('Tab3Page', () => {
-  let component: Tab3Page;
-  let fixture: ComponentFixture<Tab3Page>;
+describe('Tab2Page', () => {
+  let component: LtePage;
+  let fixture: ComponentFixture<LtePage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Tab3Page],
+      declarations: [LtePage],
       imports: [IonicModule.forRoot(), MapComponentModule]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Tab3Page);
+    fixture = TestBed.createComponent(LtePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { GoogleMap } from '@capacitor/google-maps';
 
 import { environment } from 'src/environments/environment';
@@ -36,30 +36,16 @@ export class MapComponent implements OnInit {
 
   async initMap() {
 
-    const myPosition = await this.mapService.getCurrentPosition();
-    console.log(myPosition);
-        
-    const mapOptions: CreateMapArgs = {
-      id: 'my-map',
-      apiKey: environment.API_KEY_GOOGLE_MAPS,
-      element: this.mapRef.nativeElement,
-      forceCreate: true,
-      config: {
-        center: {
-          //lat: 33.7,
-          //lng: -117.9,
-          lat: myPosition.coords.latitude,
-          lng: myPosition.coords.longitude         
-        },
-        zoom: 10,
-        streetViewControl: false,
-        disableDefaultUI: true,
-      },
+    try{ 
+      const myPosition = await this.mapService.getCurrentPosition();
+      console.log(myPosition);
+      await this.mapService.initMap(this.mapRef, myPosition);
+      //await this.map.setMapType(MapType.Satellite);
+      //await this.mapService.addMarker(myPosition);
+    } 
+    catch(e){  
+      console.error(e);
     }
-
-    await this.mapService.initMap(mapOptions);
-    //await this.map.setMapType(MapType.Satellite);
-    //await this.mapService.addMarker(myPosition);
   }
 
 }

@@ -2,11 +2,9 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
-
-import { Tab1PageRoutingModule } from './tab1-routing.module';
-
-import { MapComponentModule } from '../components/map/map.component.module';
+import { NoisePage } from './noise.page';
+import { MapComponentModule } from '../../components/map/map.component.module';
+import { NoisePageRoutingModule } from './noise-routing.module';
 
 @NgModule({
   imports: [
@@ -14,8 +12,8 @@ import { MapComponentModule } from '../components/map/map.component.module';
     CommonModule,
     FormsModule,
     MapComponentModule,
-    Tab1PageRoutingModule
+    NoisePageRoutingModule
   ],
-  declarations: [Tab1Page]
+  declarations: [NoisePage]
 })
-export class Tab1PageModule {}
+export class NoisePageModule {}

@@ -2,9 +2,11 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
-import { MapComponentModule } from '../components/map/map.component.module';
-import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { WifiPage } from './wifi.page';
+
+import { WifiPageRoutingModule } from './wifi-routing.module';
+
+import { MapComponentModule } from '../../components/map/map.component.module';
 
 @NgModule({
   imports: [
@@ -12,8 +14,8 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     CommonModule,
     FormsModule,
     MapComponentModule,
-    Tab2PageRoutingModule
+    WifiPageRoutingModule
   ],
-  declarations: [Tab2Page]
+  declarations: [WifiPage]
 })
-export class Tab2PageModule {}
+export class WifiPageModule {}

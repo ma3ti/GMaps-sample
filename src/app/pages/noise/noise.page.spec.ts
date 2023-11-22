@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MapComponentModule } from '../components/map/map.component.module';
-import { Tab2Page } from './tab2.page';
+import { MapComponentModule } from '../../components/map/map.component.module';
+import { NoisePage } from './noise.page';
 
-describe('Tab2Page', () => {
-  let component: Tab2Page;
-  let fixture: ComponentFixture<Tab2Page>;
+describe('Tab3Page', () => {
+  let component: NoisePage;
+  let fixture: ComponentFixture<NoisePage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Tab2Page],
+      declarations: [NoisePage],
       imports: [IonicModule.forRoot(), MapComponentModule]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Tab2Page);
+    fixture = TestBed.createComponent(NoisePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

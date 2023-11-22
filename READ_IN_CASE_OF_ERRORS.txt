@@ -1,0 +1,33 @@
+PROBLEM : 
+
+IN CASE OF ANDROID DEVICE WHITE SCREEN WITH GOOGLEMAPS ADD THE FOLLOWING LINES TO GLOBAL.scss
+
+.md body,
+.ios body{
+
+    --ion-background-color: none;
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+PROBLEM :
+
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':capacitor-community-admob:compileDebugKotlin'.
+'compileDebugJavaWithJavac' task (current target is 17) and 'compileDebugKotlin' task (current target is 18) jvm target compatibility should be set to the same Java version.
+Consider using JVM toolchain: https://kotl.in/gradle/jvm/toolchain
+
+SOLUTION :
+
+    - Go to "node_modules/@capacitor/google-maps/android/build.gradle" and change 
+    
+            compileOptions { sourceCompatibility JavaVersion.VERSION_17 targetCompatibility JavaVersion.VERSION_17 }
+
+            to
+
+            compileOptions { sourceCompatibility JavaVersion.VERSION_19 targetCompatibility JavaVersion.VERSION_19 }
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

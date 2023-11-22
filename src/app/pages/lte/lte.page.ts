@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MapComponent } from 'src/app/components/map/map.component';
 
 @Component({
   selector: 'app-lte',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class LtePage {
 
+  @ViewChild(MapComponent) mapComponent!: MapComponent;
+
   constructor() {}
+
+  ionViewDidEnter(){
+
+    console.log('LtePage ionViewDidEnter');
+    //this.mapComponent.mapService.getMap();
+    this.mapComponent.initMap();
+  }
 
 }

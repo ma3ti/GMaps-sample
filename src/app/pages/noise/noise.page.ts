@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MapComponent } from 'src/app/components/map/map.component';
 
 @Component({
   selector: 'app-noise',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class NoisePage {
 
+  @ViewChild(MapComponent) mapComponent!: MapComponent;
+
   constructor() {}
+
+  ionViewDidEnter(){
+    console.log('NoisePage ionViewDidEnter');
+    this.mapComponent.initMap();
+    
+  }
 
 }

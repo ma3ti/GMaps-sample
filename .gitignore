@@ -25,6 +25,7 @@ log.txt
 /android
 /ios
 /src/environments
+/todo
 
 # Compiled output
 /dist

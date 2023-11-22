@@ -27,12 +27,6 @@ export class MapComponent implements OnInit {
     console.log("MapComponent ngOnInit");
   }
 
-  ionViewWillEnter(){
-    console.log("MapComponent ionViewDidEnter");
-    
-    //this.createMap();
-  }
-
 
   async initMap() {
 
@@ -41,7 +35,7 @@ export class MapComponent implements OnInit {
       console.log(myPosition);
       await this.mapService.initMap(this.mapRef, myPosition);
       //await this.map.setMapType(MapType.Satellite);
-      //await this.mapService.addMarker(myPosition);
+      await this.mapService.addMarker(myPosition);
     } 
     catch(e){  
       console.error(e);

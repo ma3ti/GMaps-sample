@@ -5,8 +5,7 @@ import { Geolocation, Position } from '@capacitor/geolocation';
 import { CreateMapArgs } from '@capacitor/google-maps/dist/typings/implementation';
 
 import { environment } from 'src/environments/environment';
-//import { ModalComponent } from '../components/modal/modal.component';
-
+import { ModalPage } from '../pages/modal/modal.page';
 import { ModalController } from '@ionic/angular';
 
 @Injectable({
@@ -46,6 +45,7 @@ export class MapService {
     }
 
     this.map = await GoogleMap.create(mapOptions);
+
   }
 
 
@@ -55,8 +55,12 @@ export class MapService {
     return this.myPosition;
   }
 
+  getMap(): GoogleMap{
+    return this.map;
+  }
 
-/*
+
+
   async addMarker(positions: Position){
     const marker: Marker = 
       {
@@ -75,7 +79,7 @@ export class MapService {
       this.map.setOnMarkerClickListener(async (marker) => {
         
         const modal = await this.modalCtrl.create({
-          component: ModalComponent,
+          component: ModalPage,
           componentProps: {
             marker,
           },
@@ -88,7 +92,7 @@ export class MapService {
         modal.present();
       })
   }
-  */
+  
 
 
 

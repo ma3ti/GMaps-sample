@@ -38,7 +38,7 @@ export class MapService {
           lat: myPosition.coords.latitude,
           lng: myPosition.coords.longitude         
         },
-        zoom: 10,
+        zoom: 18,
         streetViewControl: false,
         disableDefaultUI: true,
       },

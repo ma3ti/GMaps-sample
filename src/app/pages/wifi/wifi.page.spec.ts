@@ -4,7 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { MapComponentModule } from '../../components/map/map.component.module';
 import { WifiPage } from './wifi.page';
 
-describe('Tab1Page', () => {
+describe('WifiPage', () => {
   let component: WifiPage;
   let fixture: ComponentFixture<WifiPage>;
 

@@ -12,7 +12,7 @@ best:
 
 https://github.com/apache/cordova-plugin-media audio
 
-https://github.com/apache/cordova-plugin-network-information network && wifi
+https://github.com/apache/cordova-plugin-network-information network && wifi 
 
 
 VEDERE SE UTILIZZARE RxJS

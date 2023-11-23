@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MapComponent } from 'src/app/components/map/map.component';
 
 @Component({
@@ -18,5 +18,8 @@ export class LtePage {
     //this.mapComponent.mapService.getMap();
     this.mapComponent.initMap();
   }
+
+
+  
 
 }
